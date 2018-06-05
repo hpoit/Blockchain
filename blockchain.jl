@@ -18,7 +18,7 @@ end
 # Add another block to the chain, which needs more than one block
 function next_block(tail_block::Block)
     new_index = tail_block.index + 1
-    return Block(new_index, Dates.now(), string("This is block ",new_index), tail_block.hash)
+    Block(new_index, Dates.now(), string("This is block ",new_index), tail_block.hash)
 end
 
 # Create the special first block or the head of the blockchain
