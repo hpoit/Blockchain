@@ -15,7 +15,7 @@ struct Block
     end
 end
 
-# Add another block to the chain, which needs more than one block
+# Chain needs more than one block, so add block
 function next_block(tail_block::Block)
     new_index = tail_block.index + 1
     Block(new_index, Dates.now(), string("This is block ",new_index), tail_block.hash)
@@ -26,10 +26,10 @@ Blockchain = [Block(0, Dates.now(), "Genesis Block", "0")]
 println("Genesis Block : 1")
 println("Hash :", Blockchain[1].hash)
 
-# Size of the blockchain
+# Blockchain size
 Blockchain_limit = 13
 
-# To make non-arbitary addition of blocks to blockchain (unlike here),
+# For non-arbitary addition of blocks to blockchain (unlike here),
 # a proof of work task is required
 for tail = 1:Blockchain_limit
     # Link the new block to the chain
