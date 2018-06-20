@@ -40,7 +40,7 @@ for tail = 1:Blockchain_limit
 end
 
 """
-A blockchain:
+Blockchain:
 
 Block : 2
 Hash :cf00fbdedd5718c54a07ade6c5dd682b6b353c8b97ed04ec6214516b856d33fe
